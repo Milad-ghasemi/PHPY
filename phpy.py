@@ -352,3 +352,11 @@ def array_diff(l, *other_arrays):
     for a in other_arrays: 
         l = [x for x in l if x not in a]
     return l
+
+def exists_file(path):
+    from os import access
+    print(os.access(path, F_OK))
+
+def get_size(path):
+    from os.path import getsize
+    print(os.path.getsize(path))
